@@ -4,7 +4,7 @@ var bye = 150;
 
 function setup(){
     createCanvas(600,400);
-    p1 = new Pacman(300, 200);
+    p1 = new Pacman(200, 180);
 }
 
 function draw(){
