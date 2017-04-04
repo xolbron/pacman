@@ -1,5 +1,5 @@
 var hi = 0;
-var we = 0;
+var we = 10;
 var bye = 150;
 
 function setup(){
