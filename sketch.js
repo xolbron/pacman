@@ -1,10 +1,14 @@
+var hi = 0;
+var we = 0;
+var bye = 150;
+
 function setup(){
     createCanvas(600,400);
     p1 = new Pacman(300, 200);
 }
 
 function draw(){
-    background(0);
+    background(hi, we, bye);
     p1.display();
     p1.move();
     p1.boundary();
@@ -25,18 +29,26 @@ function Pacman(x, y){
         if(keyIsDown(UP_ARROW)){
             this.y -= 2;
             this.rotation = 280;
+            hi = hi + 10;
+            we = we - 10;
+             
+          
         }
         if(keyIsDown(DOWN_ARROW)){
             this.y += 2;
             this.rotation = 100;
+            we = we + 10;
+            hi = hi - 10;
         }
         if(keyIsDown(RIGHT_ARROW)){
             this.x += 2;
             this.rotation = 0;
+            bye = bye + 5;
         }
         if(keyIsDown(LEFT_ARROW)){
             this.x -= 2;
             this.rotation = 190;
+            bye = bye - 5;
         }
     };
     this.boundary = function(){
